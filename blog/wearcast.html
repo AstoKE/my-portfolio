@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearCast | Şükrü Enes Tuğaç</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+        
+        .blog-header {
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .blog-nav {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .blog-nav-link {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .blog-nav-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .blog-title {
+            font-family: var(--font-mono);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+        }
+        
+        .blog-meta {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-xs);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .blog-content h3 {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .blog-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+        
+        .blog-content li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .blog-content code {
+            font-family: var(--font-mono);
+            font-size: 0.875em;
+            padding: 0.125rem 0.375rem;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            color: var(--accent-color);
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            margin: var(--spacing-md) 0;
+        }
+        
+        .tech-item {
+            font-family: var(--font-mono);
+            font-size: 0.8125rem;
+            padding: 0.375rem 0.75rem;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-prompt">$</span>
+                <span class="nav-name">SET</span>
+            </a>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">[theme]</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-container">
+        <div class="blog-header">
+            <div class="blog-nav">
+                <a href="../index.html#projects" class="blog-nav-link">
+                    <span class="terminal-prompt">></span>
+                    <span class="terminal-command">back to projects</span>
+                </a>
+            </div>
+            <h1 class="blog-title">WearCast</h1>
+            <div class="blog-meta">
+                <span>AI Clothing Recommendation System</span>
+            </div>
+        </div>
+
+        <article class="blog-content">
+            <h2>Overview</h2>
+            <p>
+                WearCast is an AI-driven clothing recommendation system that provides personalized outfit suggestions 
+                based on weather conditions and user preferences. The system integrates Gemini AI for intelligent 
+                recommendations, Supabase for data management, and OpenWeatherMap API for real-time weather data.
+            </p>
+
+            <h2>Problem Statement</h2>
+            <p>
+                Choosing appropriate clothing based on weather conditions can be time-consuming and subjective. 
+                Users often struggle to match their personal style with weather-appropriate clothing, leading to 
+                discomfort or style compromises. WearCast solves this by combining AI-powered style analysis with 
+                real-time weather data to provide intelligent, personalized recommendations.
+            </p>
+
+            <h2>System Architecture</h2>
+            <p>
+                The system follows a modern full-stack architecture:
+            </p>
+            <ul>
+                <li><strong>Frontend:</strong> HTML, CSS, JavaScript for user interface</li>
+                <li><strong>Backend:</strong> Python-based API handling AI processing</li>
+                <li><strong>AI Engine:</strong> Google Gemini API for natural language understanding and recommendations</li>
+                <li><strong>Database:</strong> Supabase for user preferences and clothing data</li>
+                <li><strong>Weather Service:</strong> OpenWeatherMap API for location-based weather data</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <div class="tech-list">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Supabase</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">HTML/CSS</span>
+                <span class="tech-item">Gemini API</span>
+                <span class="tech-item">OpenWeatherMap API</span>
+            </div>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Real-time weather integration for location-based recommendations</li>
+                <li>AI-powered style analysis using Gemini AI</li>
+                <li>Personalized outfit suggestions based on user preferences</li>
+                <li>User profile management with Supabase</li>
+                <li>Responsive web interface</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <h3>Challenge 1: API Integration Complexity</h3>
+            <p>
+                Integrating multiple APIs (Gemini, OpenWeatherMap, Supabase) required careful error handling and 
+                data synchronization. I implemented a robust error handling system with retry logic and fallback 
+                mechanisms to ensure reliability.
+            </p>
+
+            <h3>Challenge 2: AI Response Quality</h3>
+            <p>
+                Ensuring consistent and relevant AI recommendations required extensive prompt engineering. I developed 
+                a structured prompt template system that provides context about weather, user preferences, and style 
+                guidelines to Gemini AI.
+            </p>
+
+            <h3>Challenge 3: Real-time Data Updates</h3>
+            <p>
+                Weather data needed to be fetched and processed efficiently. I implemented caching mechanisms and 
+                optimized API calls to reduce latency while maintaining data freshness.
+            </p>
+
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Advanced prompt engineering techniques for LLM-based applications</li>
+                <li>Multi-API integration patterns and best practices</li>
+                <li>Real-time data processing and caching strategies</li>
+                <li>User experience design for AI-powered applications</li>
+                <li>Supabase database management and authentication</li>
+            </ul>
+
+            <h2>Future Improvements</h2>
+            <p>
+                Potential enhancements include machine learning model fine-tuning for better recommendations, 
+                integration with e-commerce platforms for direct purchase links, and mobile app development 
+                for better accessibility.
+            </p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                <span class="terminal-prompt">$</span>
+                <span class="footer-command">exit</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
